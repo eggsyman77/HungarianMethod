@@ -82,7 +82,7 @@ def calculation(matrix,mitsubishi):
         matrix[mitsubishi[s][0], mitsubishi[s][1]] = matrix[mitsubishi[s][0], mitsubishi[s][1]]
     return total,solutionofmatrix
 
-def main():
+def MitsubishiExample():
     mitsubishi_productioncost_matrix = np.array([[61,33 , 18, 6, 13],
                                                 [36, 81, 66, 10, 30],
                                                 [8, 60, 80, 1, 3],
@@ -100,11 +100,8 @@ def main():
     mitsubishi_productioncost_matrix = maximumvalue - (mitsubishi_profitmatrix)
     solution_mitsubishi = hungarian_method(mitsubishi_productioncost_matrix.copy())
     solution, solutionofmatrix = calculation(mitsubishi_profitmatrix, solution_mitsubishi)
-
     print(maximumvalue-mitsubishi_profitmatrix)
     print(mitsubishi_profitmatrix)
-
     print(f"Mitsubishi Air Conditioner assignment problem solution is: {solution:}")
 
-if __name__ == '__main__':
-    main()
+MitsubishiExample()
