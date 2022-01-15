@@ -82,7 +82,7 @@ def calculation(matrix,kumtel):
         matrix[kumtel[s][0], kumtel[s][1]] = matrix[kumtel[s][0], kumtel[s][1]]
     return total,solutionofmatrix
 
-def main():
+def KumtelExample():
     kumtel_productioncost_matrix = np.array([[16, 10, 66, 30, 86],
                                             [8, 60, 80, 13, 31],
                                             [6, 81, 36, 8, 10],
@@ -104,5 +104,5 @@ def main():
     print(kumtel_profitmatrix)
     print(f"Kumtel Infrared Heaters assignment problem solution is: {solution:}")
 
-if __name__ == '__main__':
-    main()
+
+KumtelExample()
